@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CertiPay.Payroll.Common</id>
+    <version>0.0.1</version>
+    <title>CertiPay.Payroll.Common</title>
+    <tags>taxes, tax, payroll</tags>
+    <description>This library is intended to hold some common items related to payroll processing, such as tax filing status or frequency.</description>
+    <projectUrl>https://github.com/CertiPay/CertiPay.Payroll.Common</projectUrl>
+    <licenseUrl>https://github.com/CertiPay/CertiPay.Payroll.Common/blob/master/LICENSE.md</licenseUrl>
+    <authors>CertiPay, Matt Wagner</authors>
+    <owners>Matt Wagner</owners>
+  </metadata>
+  <files>
+    <file src="\CertiPay.Payroll.Common\bin\**\CertiPay.Payroll.Common*" target="lib\net451" />
+    <file src="ReadME.md" target="tools" />
+    <file src="LICENSE.md" target="tools" />
+  </files>
+</package>
