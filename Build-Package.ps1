@@ -2,4 +2,4 @@ $BaseDir = Split-Path (Resolve-Path $MyInvocation.MyCommand.Path)
 
 mkdir "$BaseDir\Artifacts" -Force
 
-& "$BaseDir\.NuGet\NuGet.exe" Pack CertiPay.Payroll.Common.nuspec -Properties Configuration=Release -OutputDirectory "$BaseDir\artifacts\"
+& "$BaseDir\.NuGet\NuGet.exe" Pack CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec -Properties Configuration=Release -OutputDirectory "$BaseDir\artifacts\"

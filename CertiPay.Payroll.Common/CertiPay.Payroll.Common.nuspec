@@ -12,8 +12,8 @@
     <owners>Matt Wagner</owners>
   </metadata>
   <files>
-    <file src="\CertiPay.Payroll.Common\bin\Release\CertiPay.Payroll.Common*" target="lib\net451" />
-    <file src="ReadME.md" target="tools" />
-    <file src="LICENSE.md" target="tools" />
+    <file src="bin\Release\CertiPay.Payroll.Common*" target="lib\net451" />
+    <file src="..\ReadME.md" target="tools" />
+    <file src="..\LICENSE.md" target="tools" />
   </files>
 </package>

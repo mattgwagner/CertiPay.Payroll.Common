@@ -12,9 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E997D0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{4A32B394-A264-48E8-8497-2B4353E51ECB}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
 		Build-Package.ps1 = Build-Package.ps1
 		Build.ps1 = Build.ps1
-		CertiPay.Payroll.Common.nuspec = CertiPay.Payroll.Common.nuspec
+		CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec = CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 		Run-Tests.ps1 = Run-Tests.ps1
