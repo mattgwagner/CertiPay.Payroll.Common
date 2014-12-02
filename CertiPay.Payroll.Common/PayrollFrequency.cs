@@ -73,5 +73,12 @@ namespace CertiPay.Payroll.Common
                     throw new Exception("Invalid payroll frequency!");
             }
         }
+
+        public static Decimal CalculateAnnualized(this PayrollFrequency frequency, Decimal perPayPeriodIncome)
+        {
+            if (perPayPeriodIncome < 0) throw new ArgumentOutOfRangeException("Cannot have negative income");
+
+            return frequency.AnnualizedPayPeriods() * perPayPeriodIncome;
+        }
     }
 }
