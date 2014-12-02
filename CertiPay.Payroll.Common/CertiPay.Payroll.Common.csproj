@@ -50,6 +50,7 @@
     <Compile Include="PayrollScheduleWeekendPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateOrProvince.cs" />
+    <Compile Include="TaxCalculationType.cs" />
     <Compile Include="TaxpayerIdentificationNumber.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
