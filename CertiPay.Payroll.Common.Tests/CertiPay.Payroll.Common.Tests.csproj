@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="PayrollFrequencyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialTaxStatusTests.cs" />
     <Compile Include="StateOrProvinceTests.cs" />
     <Compile Include="TaxpayerIdentificationNumberTests.cs" />
   </ItemGroup>

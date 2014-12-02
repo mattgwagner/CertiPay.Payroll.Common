@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="EmployeePayType.cs" />
     <Compile Include="EmployeeTaxFilingStatus.cs" />
+    <Compile Include="SpecialTaxStatus.cs" />
     <Compile Include="EmployeeType.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="PayrollFrequency.cs" />
