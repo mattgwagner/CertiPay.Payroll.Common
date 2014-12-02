@@ -31,7 +31,17 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Once per month, i.e. 1st of the month
         /// </summary>
-        Monthly = 5
+        Monthly = 5,
+
+        /// <summary>
+        /// Once per quarter, i.e. every 3 months
+        /// </summary>
+        Quarterly = 6,
+
+        /// <summary>
+        /// Once per year
+        /// </summary>
+        Annually = 7
     }
 
     public static class PayrollFrequencies
@@ -43,6 +53,8 @@ namespace CertiPay.Payroll.Common
             yield return PayrollFrequency.BiWeekly;
             yield return PayrollFrequency.SemiMonthly;
             yield return PayrollFrequency.Monthly;
+            yield return PayrollFrequency.Quarterly;
+            yield return PayrollFrequency.Annually;
         }
 
         /// <summary>
@@ -68,6 +80,12 @@ namespace CertiPay.Payroll.Common
 
                 case PayrollFrequency.Monthly:
                     return 12;
+
+                case PayrollFrequency.Quarterly:
+                    return 4;
+
+                case PayrollFrequency.Annually:
+                    return 1;
 
                 default:
                     throw new Exception("Invalid payroll frequency!");
