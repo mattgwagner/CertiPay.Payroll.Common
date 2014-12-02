@@ -45,6 +45,7 @@
     <Compile Include="EmployeeType.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="PayrollFrequency.cs" />
+    <Compile Include="PayrollScheduleWeekendPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateOrProvince.cs" />
     <Compile Include="TaxpayerIdentificationNumber.cs" />
