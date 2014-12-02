@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace CertiPay.Payroll.Common
 {
     /// <summary>
-    /// Applies a special tax status to an employee or company, can be combined together
+    /// Applies a special tax status to an employee, company, earning, or other entity. Can be combined together
     /// i.e. SpecialTaxStatus.ExemptFromFICA | SpecialTaxStatus.ExemptFromMedicare
     /// </summary>
     [Flags]
@@ -13,37 +13,37 @@ namespace CertiPay.Payroll.Common
         // Note: This might need to get tweaked, since I'm not sure if we need to separate FICA from SS and Medicare?
 
         /// <summary>
-        /// Employee has no special tax considerations
+        /// Entity has no special tax considerations
         /// </summary>
         None = 0,
 
         /// <summary>
-        /// Employee is exempt from paying FICA taxes
+        /// Entity is exempt from paying FICA taxes
         /// </summary>
         ExemptFromFICA = 1 << 1,
 
         /// <summary>
-        /// Employee is exempt from paying Social Security taxes
+        /// Entity is exempt from paying Social Security taxes
         /// </summary>
         ExemptFromSocialSecurity = 1 << 2,
 
         /// <summary>
-        /// Employee is empt from paying medicare taxes
+        /// Entity is empt from paying medicare taxes
         /// </summary>
         ExemptFromMedicare = 1 << 3,
 
         /// <summary>
-        /// Employee is exempt from paying federal taxes
+        /// Entity is exempt from paying federal taxes
         /// </summary>
         ExemptFromFederalTax = 1 << 4,
 
         /// <summary>
-        /// Employee is exempt from paying state taxes
+        /// Entity is exempt from paying state taxes
         /// </summary>
         ExemptFromStateTax = 1 << 5,
 
         /// <summary>
-        /// Employee is exempt from paying local taxes
+        /// Entity is exempt from paying local taxes
         /// </summary>
         ExemptFromLocalTax = 1 << 6
     }
