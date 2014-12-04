@@ -105,7 +105,7 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Returns a deannualized amount for a pay frequency, i.e. $52,000/year -> $1000/week
         /// </summary>
-        public static Decimal CalculateDennualized(this PayrollFrequency frequency, Decimal perYearIncome)
+        public static Decimal CalculateDeannualized(this PayrollFrequency frequency, Decimal perYearIncome)
         {
             if (perYearIncome < 0) throw new ArgumentOutOfRangeException("Cannot have negative income");
 

@@ -37,7 +37,7 @@ namespace CertiPay.Payroll.Common.Tests
         [TestCase(PayrollFrequency.BiWeekly, 1234.56, 32098.56)]
         public void Should_Calculate_DeAnnualized_Pay(PayrollFrequency freq, Decimal expected, Decimal perYear)
         {
-            Assert.AreEqual(expected, freq.CalculateDennualized(perYear));
+            Assert.AreEqual(expected, freq.CalculateDeannualized(perYear));
         }
     }
 }
