@@ -92,11 +92,24 @@ namespace CertiPay.Payroll.Common
             }
         }
 
+        /// <summary>
+        /// Returns an annualized amount for a pay frequency, i.e. $1000/week -> $52,000/year
+        /// </summary>
         public static Decimal CalculateAnnualized(this PayrollFrequency frequency, Decimal perPayPeriodIncome)
         {
             if (perPayPeriodIncome < 0) throw new ArgumentOutOfRangeException("Cannot have negative income");
 
             return frequency.AnnualizedPayPeriods() * perPayPeriodIncome;
+        }
+
+        /// <summary>
+        /// Returns a deannualized amount for a pay frequency, i.e. $52,000/year -> $1000/week
+        /// </summary>
+        public static Decimal CalculateDennualized(this PayrollFrequency frequency, Decimal perYearIncome)
+        {
+            if (perYearIncome < 0) throw new ArgumentOutOfRangeException("Cannot have negative income");
+
+            return perYearIncome / frequency.AnnualizedPayPeriods();
         }
     }
 }
