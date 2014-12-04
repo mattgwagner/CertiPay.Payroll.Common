@@ -109,7 +109,7 @@ namespace CertiPay.Payroll.Common
         {
             if (perYearIncome < 0) throw new ArgumentOutOfRangeException("Cannot have negative income");
 
-            return perYearIncome / frequency.AnnualizedPayPeriods();
+            return (perYearIncome / frequency.AnnualizedPayPeriods()).Round();
         }
     }
 }
