@@ -18,34 +18,34 @@ namespace CertiPay.Payroll.Common
         None = 0,
 
         /// <summary>
-        /// Entity is exempt from paying FICA taxes
-        /// </summary>
-        ExemptFromFICA = 1 << 1,
-
-        /// <summary>
         /// Entity is exempt from paying Social Security taxes
         /// </summary>
-        ExemptFromSocialSecurity = 1 << 2,
+        ExemptFromSocialSecurity = 1 << 1,
 
         /// <summary>
         /// Entity is empt from paying medicare taxes
         /// </summary>
-        ExemptFromMedicare = 1 << 3,
+        ExemptFromMedicare = 1 << 2,
+
+        /// <summary>
+        /// Entity is exempt from paying FICA taxes
+        /// </summary>
+        ExemptFromFICA = ExemptFromSocialSecurity | ExemptFromMedicare,
 
         /// <summary>
         /// Entity is exempt from paying federal taxes
         /// </summary>
-        ExemptFromFederalTax = 1 << 4,
+        ExemptFromFederalTax = 1 << 3,
 
         /// <summary>
         /// Entity is exempt from paying state taxes
         /// </summary>
-        ExemptFromStateTax = 1 << 5,
+        ExemptFromStateTax = 1 << 4,
 
         /// <summary>
         /// Entity is exempt from paying local taxes
         /// </summary>
-        ExemptFromLocalTax = 1 << 6
+        ExemptFromLocalTax = 1 << 5
     }
 
     public class SpecialTaxStatuses
