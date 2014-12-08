@@ -13,6 +13,7 @@ namespace CertiPay.Payroll.Common.Tests
         [TestCase(SpecialTaxStatus.ExemptFromFICA, SpecialTaxStatus.ExemptFromSocialSecurity)]
         [TestCase(SpecialTaxStatus.ExemptFromFICA, SpecialTaxStatus.ExemptFromMedicare & SpecialTaxStatus.ExemptFromSocialSecurity)]
         [TestCase(SpecialTaxStatus.ExemptFromFICA, SpecialTaxStatus.ExemptFromMedicare | SpecialTaxStatus.ExemptFromSocialSecurity)]
+        [TestCase(SpecialTaxStatus.ExemptFromFICA | SpecialTaxStatus.ExemptFromMedicare, SpecialTaxStatus.ExemptFromSocialSecurity)]
         public void Should_Have_Flags(SpecialTaxStatus flags, SpecialTaxStatus should_have)
         {
             Assert.IsTrue(flags.HasFlag(should_have));

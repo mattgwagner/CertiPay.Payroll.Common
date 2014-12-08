@@ -5,7 +5,7 @@ namespace CertiPay.Payroll.Common
 {
     /// <summary>
     /// Applies a special tax status to an employee, company, earning, or other entity. Can be combined together
-    /// i.e. SpecialTaxStatus.ExemptFromFICA | SpecialTaxStatus.ExemptFromMedicare
+    /// i.e. SpecialTaxStatus.ExemptFromFICA | SpecialTaxStatus.ExemptFromStateTax
     /// </summary>
     [Flags]
     public enum SpecialTaxStatus : byte
