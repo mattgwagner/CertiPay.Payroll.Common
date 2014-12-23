@@ -7,7 +7,7 @@
 #   - Section names should be unique on each level.
 
 # version format
-version: 0.0.{build}
+version: 1.0.{build}
 
 shallow_clone: true
 
@@ -27,7 +27,7 @@ build:
 assembly_info:
   patch: true
   file: AssemblyInfo.*
-  assembly_version: "0.0.{build}"
+  assembly_version: "{version}"
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
 
