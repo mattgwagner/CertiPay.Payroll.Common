@@ -23,7 +23,6 @@ configuration: Release
 
 build:
   project: CertiPay.Payroll.Common.sln
-  publish_nuget: true
 
 assembly_info:
   patch: true
@@ -48,6 +47,10 @@ nuget:
   account_feed: true
   project_feed: true
   disable_publish_on_pr: true     # disable publishing of .nupkg artifacts to account/project feeds for pull request builds
+
+after_build:
+  - cmd: NuGet pack CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec -Version %APPVEYOR_BUILD_VERSION%
+  - ps: Push-AppveyorArtifact "CertiPay.Payroll.Common.$($env:APPVEYOR_BUILD_VERSION).nupkg"
 
 deploy:
 - provider: NuGet
