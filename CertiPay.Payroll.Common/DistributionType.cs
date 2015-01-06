@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace CertiPay.Payroll.Common
 {
@@ -15,6 +16,7 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// A given flat amount of the remaining paycheck is sent to the distribution i.e. $400 to savings
         /// </summary>
+        [Description("Flat Amount")]
         FlatAmount = 2,
 
         /// <summary>

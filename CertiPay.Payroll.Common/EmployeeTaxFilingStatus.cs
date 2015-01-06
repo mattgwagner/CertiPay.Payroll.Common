@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace CertiPay.Payroll.Common
 {
@@ -15,11 +16,13 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Employee is filing taxes jointly with their spouse
         /// </summary>
+        [Description("Married Filing Jointly")]
         MarriedFilingJointly = 2,
 
         /// <summary>
         /// Employee is married but is filing at the higher single rate
         /// </summary>
+        [Description("Married Filing Separately")]
         MarriedFilingSeparately = 3,
 
         /// <summary>
@@ -28,11 +31,13 @@ namespace CertiPay.Payroll.Common
         /// dependent(s) or other qualifying individuals. See Pub. 501, Exemptions, Standard Deduction,
         /// and Filing Information, for information.
         /// </summary>
+        [Description("Head of Household")]
         HeadOfHousehold = 4,
 
         /// <summary>
         /// Employee is a widow(er) and has a dependent child
         /// </summary>
+        [Description("Widower with Dependent Child")]
         WidowerWithDependentChild = 5
     }
 
