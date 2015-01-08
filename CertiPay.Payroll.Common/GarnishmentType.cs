@@ -19,36 +19,26 @@ namespace CertiPay.Payroll.Common
     {
         // TODO -- These "SHOULD" be in order of application, as described above
 
-        [Description("Unpaid Federal Taxes")]
-        UnpaidFederalTaxes = 1,
-
-        [Description("Unpaid State Taxes")]
-        UnpaidStateTaxes = 2,
-
-        [Description("Unpaid Local Taxes")]
-        UnpaidLocalTaxes = 3,
+        [Description("Unpaid Taxes")]
+        UnpaidTaxes = 1,
 
         [Description("Child Support")]
-        ChildSupport = 10,
+        ChildSupport = 5,
 
-        Bankruptcy = 15,
+        Bankruptcy = 10,
 
-        Creditor = 16,
+        Creditor = 11,
 
         [Description("Student Loans")]
-        StudentLoans = 17
+        StudentLoans = 12
     }
 
     public class GarnishmentTypes
     {
         public static IEnumerable<GarnishmentType> Values()
         {
-            yield return GarnishmentType.UnpaidFederalTaxes;
-            yield return GarnishmentType.UnpaidStateTaxes;
-            yield return GarnishmentType.UnpaidLocalTaxes;
-
+            yield return GarnishmentType.UnpaidTaxes;
             yield return GarnishmentType.ChildSupport;
-
             yield return GarnishmentType.Creditor;
             yield return GarnishmentType.Bankruptcy;
             yield return GarnishmentType.StudentLoans;
