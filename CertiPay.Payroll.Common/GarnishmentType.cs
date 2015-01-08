@@ -17,20 +17,22 @@ namespace CertiPay.Payroll.Common
     /// <seealso cref="http://en.wikipedia.org/wiki/Garnishment"/>
     public enum GarnishmentType
     {
-        // TODO -- These "SHOULD" be in order of application, as described above
+        // Note: These are currently ordered in the order they should be applied, however there are many rules/guidelines around how to apply
+        // garnishments, such as if a child support order was in place before an IRS Tax Levy, it stays in first... 
+        // so, best to just have another way of applying them in the correct order in each circumstance
 
         [Description("Unpaid Taxes")]
         UnpaidTaxes = 1,
 
         [Description("Child Support")]
-        ChildSupport = 5,
+        ChildSupport = 2,
 
-        Bankruptcy = 10,
+        Bankruptcy = 3,
 
-        Creditor = 11,
+        Creditor = 4,
 
         [Description("Student Loans")]
-        StudentLoans = 12
+        StudentLoans = 5
     }
 
     public class GarnishmentTypes
