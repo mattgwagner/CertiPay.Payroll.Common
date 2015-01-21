@@ -16,7 +16,7 @@ For any questions or comments, please open an issue in our GitHub Issue tracker 
 
 ## Continuous Integration System
 
-[![Build status](https://ci.appveyor.com/api/projects/status/982vm3ycy0qa4rwb?svg=true)](https://ci.appveyor.com/project/mattgwagner/certipay-payroll-common)
+![Build Status](https://ci.appveyor.com/api/projects/status/hjkj3ww525jw3wit/branch/master?svg=true)
 
 ## Contributing
 
