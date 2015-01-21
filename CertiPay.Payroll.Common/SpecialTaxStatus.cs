@@ -11,8 +11,6 @@ namespace CertiPay.Payroll.Common
     [Flags]
     public enum SpecialTaxStatus : byte
     {
-        // Note: This might need to get tweaked, since I'm not sure if we need to separate FICA from SS and Medicare?
-
         /// <summary>
         /// Entity has no special tax considerations
         /// </summary>
@@ -52,7 +50,13 @@ namespace CertiPay.Payroll.Common
         /// Entity is exempt from paying local taxes
         /// </summary>
         [Description("Exempt from Local Taxes")]
-        ExemptFromLocalTax = 1 << 5
+        ExemptFromLocalTax = 1 << 5,
+
+        /// <summary>
+        /// Entity is exempt from paying FUTA tax (an employer-only tax)
+        /// </summary>
+        [Description("Exempt from Federal Unemployment Tax")]
+        ExemptFromFUTA = 1 << 6
     }
 
     public class SpecialTaxStatuses
@@ -66,6 +70,7 @@ namespace CertiPay.Payroll.Common
             yield return SpecialTaxStatus.ExemptFromFederalTax;
             yield return SpecialTaxStatus.ExemptFromStateTax;
             yield return SpecialTaxStatus.ExemptFromLocalTax;
+            yield return SpecialTaxStatus.ExemptFromFUTA;
         }
     }
 }
