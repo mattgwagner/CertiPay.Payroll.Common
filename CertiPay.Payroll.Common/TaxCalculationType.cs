@@ -7,6 +7,8 @@ namespace CertiPay.Payroll.Common
     /// </summary>
     public enum TaxCalculationType : byte
     {
+        // Note: These descriptions were from the Oracle/PeopleSoft documentation and seemed to be the most descriptive I could find
+
         /// <summary>
         /// Annualized: Select to annualize the earnings, calculate the tax on the annualized amount, and divide the tax by the number of pay periods in the year.
         /// The result is the withholding for the pay period. This is the most common tax method.
