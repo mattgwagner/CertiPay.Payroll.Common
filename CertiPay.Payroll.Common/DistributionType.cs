@@ -6,7 +6,7 @@ namespace CertiPay.Payroll.Common
     /// <summary>
     /// How the distribution is calculated from the net paycheck amount
     /// </summary>
-    public enum DistributionType
+    public enum DistributionType : byte
     {
         /// <summary>
         /// The remaining amount of the payroll posting is send to the distribution

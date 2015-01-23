@@ -6,7 +6,7 @@ namespace CertiPay.Payroll.Common
     /// <summary>
     /// How to handle when routine payroll schedules fall on a weekend day
     /// </summary>
-    public enum PayrollScheduleWeekendPolicy
+    public enum PayrollScheduleWeekendPolicy : byte
     {
         /// <summary>
         /// Pay on the business day preceeding the weekend

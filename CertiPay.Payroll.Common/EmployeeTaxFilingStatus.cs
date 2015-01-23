@@ -6,7 +6,7 @@ namespace CertiPay.Payroll.Common
     /// <summary>
     /// Describes how an employee is configured to file taxes
     /// </summary>
-    public enum EmployeeTaxFilingStatus
+    public enum EmployeeTaxFilingStatus : byte
     {
         /// <summary>
         /// Employee is filing taxes without any dependents or a spouse

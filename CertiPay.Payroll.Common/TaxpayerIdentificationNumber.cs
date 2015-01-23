@@ -34,7 +34,7 @@ namespace CertiPay.Payroll.Common
             }
         }
 
-        public enum TINType
+        public enum TINType : byte
         {
             [Description("Social Security Number")]
             SSN = 1,

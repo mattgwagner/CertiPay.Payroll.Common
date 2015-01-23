@@ -5,7 +5,7 @@ namespace CertiPay.Payroll.Common
     /// <summary>
     /// Describes how an employee pay is calculated
     /// </summary>
-    public enum EmployeePayType
+    public enum EmployeePayType : byte
     {
         /// <summary>
         /// Employee earns a set salary per period of time, i.e. $70,000 yearly

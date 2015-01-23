@@ -9,7 +9,7 @@ namespace CertiPay.Payroll.Common
     /// This is a matter generally to be determined by the employer (US Department of Labor). The definition by
     /// employer can vary and is generally published in a company's Employee Handbook.
     /// </summary>
-    public enum EmployeeType
+    public enum EmployeeType : byte
     {
         /// <summary>
         /// Companies commonly require from 30–35 or 40 hours per week to be defined as full-time and therefore eligible for benefits.
@@ -21,7 +21,7 @@ namespace CertiPay.Payroll.Common
         /// A part-time job is a form of employment that carries fewer hours per week than a full-time job.
         /// Workers are considered to be part-time if they commonly work fewer than 30 or 35 hours per week.
         /// </summary>
-        [Description("Part Timr")]
+        [Description("Part Time")]
         PartTime = 2,
 
         /// <summary>

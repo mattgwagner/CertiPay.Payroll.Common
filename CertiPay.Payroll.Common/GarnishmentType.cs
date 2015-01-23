@@ -15,10 +15,10 @@ namespace CertiPay.Payroll.Common
     /// (Source: Wikipedia)
     /// </summary>
     /// <seealso cref="http://en.wikipedia.org/wiki/Garnishment"/>
-    public enum GarnishmentType
+    public enum GarnishmentType : byte
     {
         // Note: These are currently ordered in the order they should be applied, however there are many rules/guidelines around how to apply
-        // garnishments, such as if a child support order was in place before an IRS Tax Levy, it stays in first... 
+        // garnishments, such as if a child support order was in place before an IRS Tax Levy, it stays in first...
         // so, best to just have another way of applying them in the correct order in each circumstance
 
         [Description("Unpaid Taxes")]

@@ -6,7 +6,7 @@ namespace CertiPay.Payroll.Common
     /// <summary>
     /// How often payroll is run for a company / group of employees
     /// </summary>
-    public enum PayrollFrequency
+    public enum PayrollFrequency : byte
     {
         /// <summary>
         /// Every day of work

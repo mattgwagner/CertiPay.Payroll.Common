@@ -5,7 +5,7 @@ namespace CertiPay.Payroll.Common
     /// <summary>
     /// The tax method indicates the tax calculation method to be used for the pay.
     /// </summary>
-    public enum TaxCalculationType
+    public enum TaxCalculationType : byte
     {
         /// <summary>
         /// Annualized: Select to annualize the earnings, calculate the tax on the annualized amount, and divide the tax by the number of pay periods in the year.

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CertiPay.Payroll.Common
 {
-    public enum StateOrProvince
+    public enum StateOrProvince : byte
     {
         [Description("Alabama")]
         AL,
