@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace CertiPay.Payroll.Common
 {
@@ -21,17 +21,17 @@ namespace CertiPay.Payroll.Common
         // garnishments, such as if a child support order was in place before an IRS Tax Levy, it stays in first...
         // so, best to just have another way of applying them in the correct order in each circumstance
 
-        [Description("Unpaid Taxes")]
+        [Display(Name = "Unpaid Taxes")]
         UnpaidTaxes = 1,
 
-        [Description("Child Support")]
+        [Display(Name = "Child Support")]
         ChildSupport = 2,
 
         Bankruptcy = 3,
 
         Creditor = 4,
 
-        [Description("Student Loans")]
+        [Display(Name = "Student Loans")]
         StudentLoans = 5
     }
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace CertiPay.Payroll.Common
 {
@@ -11,20 +11,20 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Pay on the business day preceeding the weekend
         /// </summary>
-        [Description("Prior Business Day")]
+        [Display(Name = "Prior Business Day")]
         PriorBusinessDay = 1,
 
         /// <summary>
         /// Pay on the next business day following the weekend
         /// </summary>
-        [Description("Next Business Day")]
+        [Display(Name = "Next Business Day")]
         NextBusinessDay = 2,
 
         /// <summary>
         /// Pay date should be adjusted to the nearest business day, i.e. if payday falls on a Saturday,
         /// pay on Friday. If it falls on a Sunday, pay on Monday.
         /// </summary>
-        [Description("Nearest Business Day")]
+        [Display(Name = "Nearest Business Day")]
         NearestBusinessDay = 3
     }
 

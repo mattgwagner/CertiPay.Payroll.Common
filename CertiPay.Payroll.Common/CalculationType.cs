@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace CertiPay.Payroll.Common
 {
@@ -14,25 +14,25 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Deduction is taken as a percentage of the gross pay
         /// </summary>
-        [Description("Percent of Gross Pay")]
+        [Display(Name = "Percent of Gross Pay")]
         PercentOfGrossPay = 1,
 
         /// <summary>
         /// Deduction is taken as a percentage of the net pay
         /// </summary>
-        [Description("Percent of Net Pay")]
+        [Display(Name = "Percent of Net Pay")]
         PercentOfNetPay = 2,
 
         /// <summary>
         /// Deduction is taken as a flat, fixed amount
         /// </summary>
-        [Description("Fixed Amount")]
+        [Display(Name = "Fixed Amount")]
         FixedAmount = 3,
 
         /// <summary>
         /// Deduction is taken as a fixed amount per hour of work
         /// </summary>
-        [Description("Fixed Hourly Amount")]
+        [Display(Name = "Fixed Hourly Amount")]
         FixedHourlyAmount = 4
     }
 

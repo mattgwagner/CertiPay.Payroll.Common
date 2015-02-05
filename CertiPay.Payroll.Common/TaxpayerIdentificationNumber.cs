@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace CertiPay.Payroll.Common
@@ -36,13 +35,13 @@ namespace CertiPay.Payroll.Common
 
         public enum TINType : byte
         {
-            [Description("Social Security Number")]
+            [Display(Name = "Social Security Number")]
             SSN = 1,
 
             /// <summary>
             /// An Employer Identification Number (EIN) is also known as a federal tax identification number, and is used to identify a business entity.
             /// </summary>
-            [Description("Employer Identification Number")]
+            [Display(Name = "Employer Identification Number")]
             EIN = 2,
 
             /// <summary>
@@ -50,7 +49,7 @@ namespace CertiPay.Payroll.Common
             /// certain nonresident and resident aliens, their spouses, and dependents who cannot get a Social Security Number (SSN).
             /// It is a 9-digit number, beginning with the number "9", formatted like an SSN (NNN-NN-NNNN).
             /// </summary>
-            [Description("Individual Taxpayer Identification Number")]
+            [Display(Name = "Individual Taxpayer Identification Number")]
             ITIN = 3
 
             // ATIN - Taxpayer Identification Number for Pending U.S. Adoptions -- Will never be used, but is here for reference
