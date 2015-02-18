@@ -1,8 +1,12 @@
 $PSake.use_exit_on_error = $true
 
+$ProjectName = "CertiPay.Payroll.Common"
+
+$SolutionFile = "$SolutionRoot\$ProjectName.sln"
+
 ## This comes from the build server iteration
 if(!$BuildNumber) { $BuildNumber = $env:APPVEYOR_BUILD_NUMBER }
-if(!$BuildNumber) { $BuildNumber = "0.1"}
+if(!$BuildNumber) { $BuildNumber = "1"}
 
 ## This comes from the Hg commit hash used to build
 if(!$CommitHash) { $CommitHash = $env:APPVEYOR_REPO_COMMIT }
@@ -21,8 +25,6 @@ $SolutionRoot = (Split-Path -parent $Here)
 
 Import-Module "$Here\Common" -DisableNameChecking
 
-$SolutionFile = "$SolutionRoot\CertiPay.Payroll.Common.sln"
-
 $NuGet = Join-Path $SolutionRoot ".nuget\nuget.exe"
 
 $MSBuild ="${env:ProgramFiles(x86)}\MSBuild\12.0\Bin\msbuild.exe"
@@ -39,11 +41,11 @@ Task Build -depends Restore-Packages, Update-AssemblyInfoFiles {
 }
 
 Task Package -depends Build {
-	exec { . $NuGet pack "$SolutionRoot\CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec" -Properties Configuration=$Configuration -OutputDirectory "$SolutionRoot" }
+	exec { . $NuGet pack "$SolutionRoot\$ProjectName\$ProjectName.nuspec" -Properties Configuration=$Configuration -OutputDirectory "$SolutionRoot" -Version "$Version" }
 }
 
 Task Test -depends Build, Install-NUnitRunner {
-	exec { . $NUnit "$SolutionRoot\CertiPay.Payroll.Common.Tests\bin\$Configuration\CertiPay.Payroll.Common.Tests.dll" /xml:"$SolutionRoot\CertiPay.Payroll.Common.Tests.xml" }
+	exec { . $NUnit "$SolutionRoot\$ProjectName.Tests\bin\$Configuration\$ProjectName.Tests.dll" /xml:"$SolutionRoot\$ProjectName.Tests.xml" }
 }
 
 Task Clean {
