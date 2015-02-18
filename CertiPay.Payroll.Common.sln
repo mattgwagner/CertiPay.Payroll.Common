@@ -10,15 +10,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E997D0
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{4A32B394-A264-48E8-8497-2B4353E51ECB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{4A32B394-A264-48E8-8497-2B4353E51ECB}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
-		Build-Package.ps1 = Build-Package.ps1
-		Build.ps1 = Build.ps1
+		.build\Bootstrap.ps1 = .build\Bootstrap.ps1
+		Build.bat = Build.bat
 		CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec = CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec
+		.build\Common.psm1 = .build\Common.psm1
+		.build\default.ps1 = .build\default.ps1
 		LICENSE.md = LICENSE.md
 		README.md = README.md
-		Run-Tests.ps1 = Run-Tests.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertiPay.Payroll.Common", "CertiPay.Payroll.Common\CertiPay.Payroll.Common.csproj", "{F18371C6-4F98-4876-9DAE-6E0211C14AAD}"
