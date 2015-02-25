@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Code\CertiPay.Payroll.Common\CertiPay.Payroll.Common.Tests\bin\Release\CertiPay.Payroll.Common.Tests.dll" total="47" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-02-25" time="14:22:17">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Code\CertiPay.Payroll.Common\.build" machine-name="DEV-BOX" user="Administrator" user-domain="DEV-BOX" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Code\CertiPay.Payroll.Common\CertiPay.Payroll.Common.Tests\bin\Release\CertiPay.Payroll.Common.Tests.dll" executed="True" result="Success" success="True" time="0.374" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="CertiPay" executed="True" result="Success" success="True" time="0.347" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Payroll" executed="True" result="Success" success="True" time="0.347" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Common" executed="True" result="Success" success="True" time="0.347" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.346" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="PayrollFrequencyTests" executed="True" result="Success" success="True" time="0.159" asserts="0">
+                        <results>
+                          <test-suite type="ParameterizedTest" name="Should_Calculate_Annualized_Pay" executed="True" result="Success" success="True" time="0.097" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_Annualized_Pay(Weekly,1000m,52000m)" executed="True" result="Success" success="True" time="0.062" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_Annualized_Pay(Monthly,1000m,12000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_Annualized_Pay(BiWeekly,1000m,26000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_Annualized_Pay(BiWeekly,1234.56m,32098.56m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_Annualized_Pay(SemiMonthly,1000m,24000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_Annualized_Pay(Daily,1000m,260000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="ParameterizedTest" name="Should_Calculate_DeAnnualized_Pay" executed="True" result="Success" success="True" time="0.021" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_DeAnnualized_Pay(Weekly,1000m,52000m)" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_DeAnnualized_Pay(SemiMonthly,1000m,24000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_DeAnnualized_Pay(Daily,1000m,260000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_DeAnnualized_Pay(BiWeekly,1234.56m,32098.56m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_DeAnnualized_Pay(Monthly,1000m,12000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Calculate_DeAnnualized_Pay(BiWeekly,1000m,26000m)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="ParameterizedTest" name="Should_Return_Correct_Annualized_PayPeriods" executed="True" result="Success" success="True" time="0.008" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Return_Correct_Annualized_PayPeriods(Monthly,12)" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Return_Correct_Annualized_PayPeriods(SemiMonthly,24)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Return_Correct_Annualized_PayPeriods(Weekly,52)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Return_Correct_Annualized_PayPeriods(Daily,260)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.PayrollFrequencyTests.Should_Return_Correct_Annualized_PayPeriods(BiWeekly,26)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SpecialTaxStatusTests" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-suite type="ParameterizedTest" name="Should_Have_Flags" executed="True" result="Success" success="True" time="0.022" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(None,None)" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA,ExemptFromMedicare)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA,ExemptFromSocialSecurity)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA,None)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA,ExemptFromFICA)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA,ExemptFromSocialSecurity)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA, ExemptFromFederalTax, ExemptFromStateTax,ExemptFromFICA)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFederalTax, ExemptFromLocalTax,ExemptFromLocalTax)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromFICA,ExemptFromSocialSecurity)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Have_Flags(ExemptFromStateTax, ExemptFromLocalTax,ExemptFromStateTax)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="ParameterizedTest" name="Should_Not_Have_Flags" executed="True" result="Success" success="True" time="0.006" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Not_Have_Flags(None,ExemptFromStateTax)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Not_Have_Flags(ExemptFromFederalTax,ExemptFromStateTax)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Not_Have_Flags(ExemptFromMedicare,ExemptFromFICA)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Not_Have_Flags(ExemptFromSocialSecurity, ExemptFromFederalTax,ExemptFromStateTax)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Not_Have_Flags(ExemptFromSocialSecurity,ExemptFromStateTax)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.SpecialTaxStatusTests.Should_Not_Have_Flags(ExemptFromSocialSecurity,ExemptFromFICA)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="StateOrProvinceTest" executed="True" result="Success" success="True" time="0.101" asserts="0">
+                        <results>
+                          <test-suite type="ParameterizedTest" name="Should_Display_Description_Attribute" executed="True" result="Success" success="True" time="0.045" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Display_Description_Attribute(FL,&quot;Florida&quot;,&quot;FL&quot;)" executed="True" result="Success" success="True" time="0.034" asserts="2" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Display_Description_Attribute(WA,&quot;Washington&quot;,&quot;WA&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Display_Description_Attribute(FL,&quot;Florida&quot;,&quot;FL&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="ParameterizedTest" name="Should_Find_State_By_Name" executed="True" result="Success" success="True" time="0.039" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Find_State_By_Name(&quot;New Jersey&quot;,NJ)" executed="True" result="Success" success="True" time="0.025" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Find_State_By_Name(&quot;Florida&quot;,FL)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Find_State_By_Name(&quot;North Carolina&quot;,NC)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Find_State_By_Name(&quot;Texas&quot;,TX)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-case name="CertiPay.Payroll.Common.Tests.StateOrProvinceTest.Should_Include_Important_States" executed="True" result="Success" success="True" time="0.010" asserts="4" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TaxpayerIdentificationNumberTests" executed="True" result="Success" success="True" time="0.037" asserts="0">
+                        <results>
+                          <test-suite type="ParameterizedTest" name="Should_Format_EIN" executed="True" result="Success" success="True" time="0.005" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.TaxpayerIdentificationNumberTests.Should_Format_EIN(&quot;123456789&quot;,&quot;12-3456789 (EIN)&quot;)" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.TaxpayerIdentificationNumberTests.Should_Format_EIN(&quot;878889898&quot;,&quot;87-8889898 (EIN)&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="ParameterizedTest" name="Should_Format_ITIN" executed="True" result="Success" success="True" time="0.005" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.TaxpayerIdentificationNumberTests.Should_Format_ITIN(&quot;123456789&quot;,&quot;123-45-6789 (ITIN)&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.TaxpayerIdentificationNumberTests.Should_Format_ITIN(&quot;878889898&quot;,&quot;878-88-9898 (ITIN)&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="ParameterizedTest" name="Should_Format_SSN" executed="True" result="Success" success="True" time="0.019" asserts="0">
+                            <results>
+                              <test-case name="CertiPay.Payroll.Common.Tests.TaxpayerIdentificationNumberTests.Should_Format_SSN(&quot;123456789&quot;,&quot;123-45-6789 (SSN)&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="CertiPay.Payroll.Common.Tests.TaxpayerIdentificationNumberTests.Should_Format_SSN(&quot;878889898&quot;,&quot;878-88-9898 (SSN)&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
