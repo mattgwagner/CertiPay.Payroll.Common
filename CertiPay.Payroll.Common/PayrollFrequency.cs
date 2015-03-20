@@ -58,12 +58,46 @@ namespace CertiPay.Payroll.Common
         }
 
         /// <summary>
+        /// Returns the typical number of "workable" hours per pay period, based on an 8 hour work day,
+        /// 52 weeks per year.
+        /// </summary>
+        public static Decimal HoursPerPeriod(this PayrollFrequency frequency)
+        {
+            switch (frequency)
+            {
+                case PayrollFrequency.Daily:
+                    return 8;
+
+                case PayrollFrequency.Weekly:
+                    return 40;
+
+                case PayrollFrequency.BiWeekly:
+                    return 80;
+
+                case PayrollFrequency.SemiMonthly:
+                    return 86.67m;
+
+                case PayrollFrequency.Monthly:
+                    return 173.33m;
+
+                case PayrollFrequency.Quarterly:
+                    return 520;
+
+                case PayrollFrequency.Annually:
+                    return 2080;
+
+                default:
+                    throw new Exception("Invalid payroll frequency!");
+            }
+        }
+
+        /// <summary>
         /// Returns the number of times payroll should run for the given configured frequency
         /// in a calendar year, i.e. monthly pay => 12 pay periods
         /// </summary>
-        public static int AnnualizedPayPeriods(this PayrollFrequency payroll)
+        public static int AnnualizedPayPeriods(this PayrollFrequency frequency)
         {
-            switch (payroll)
+            switch (frequency)
             {
                 case PayrollFrequency.Daily:
                     // 5 days per week x 52 weeks = 260
