@@ -1,8 +1,8 @@
-﻿using CertiPay.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection;
 
 namespace CertiPay.Payroll.Common
 {
@@ -199,10 +199,29 @@ namespace CertiPay.Payroll.Common
         public static StateOrProvince GetStateByName(string name)
         {
             var value = from state in Values()
-                        where String.Equals(state.DisplayName(), name, StringComparison.InvariantCultureIgnoreCase)
+                        where String.Equals(state.Display(e => e.Name), name, StringComparison.InvariantCultureIgnoreCase)
                         select state;
 
             return value.SingleOrDefault();
+        }
+
+        public static String DisplayName(this StateOrProvince state)
+        {
+            return state.Display(e => e.Name);
+        }
+
+        private static String Display(this Enum val, Func<DisplayAttribute, String> selector)
+        {
+            FieldInfo fi = val.GetType().GetField(val.ToString());
+
+            DisplayAttribute[] attributes = (DisplayAttribute[])fi.GetCustomAttributes(typeof(DisplayAttribute), false);
+
+            if (attributes != null && attributes.Length > 0)
+            {
+                return selector.Invoke(attributes[0]);
+            }
+
+            return val.ToString();
         }
     }
 }

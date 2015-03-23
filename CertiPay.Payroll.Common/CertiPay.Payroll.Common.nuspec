@@ -10,9 +10,6 @@
     <licenseUrl>https://github.com/CertiPay/CertiPay.Payroll.Common/blob/master/LICENSE.md</licenseUrl>
     <authors>CertiPay, Matt Wagner</authors>
     <owners>Matt Wagner</owners>
-    <dependencies>
-      <dependency id="CertiPay.Common" version="0.1.0" />
-    </dependencies>
   </metadata>
   <files>
     <file src="bin\Release\CertiPay.Payroll.Common*" target="lib\net451" />

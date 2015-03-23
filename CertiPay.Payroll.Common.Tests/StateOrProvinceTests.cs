@@ -1,5 +1,4 @@
-﻿using CertiPay.Common;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 using System.Linq;
 
