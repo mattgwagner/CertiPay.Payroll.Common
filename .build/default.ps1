@@ -36,11 +36,11 @@ FormatTaskName (("-"*25) + "[{0}]" + ("-"*25))
 
 Task default -depends Build
 
-Task Build -depends Restore-Packages, Update-AssemblyInfoFiles {
+Task Build -depends Restore-Packages {
 	exec { . $MSBuild $SolutionFile /t:Build /v:normal /p:Configuration=$Configuration }
 }
 
-Task Package -depends Build {
+Task Package -depends Update-AssemblyInfoFiles, Build {
 	exec { . $NuGet pack "$SolutionRoot\$ProjectName\$ProjectName.nuspec" -Properties Configuration=$Configuration -OutputDirectory "$SolutionRoot" -Version "$Version" }
 }
 
