@@ -9,181 +9,181 @@ namespace CertiPay.Payroll.Common
     public enum StateOrProvince : byte
     {
         [Display(Name = "Alabama")]
-        AL,
+        AL = 1,
 
         [Display(Name = "Alaska")]
-        AK,
+        AK = 2,
 
         [Display(Name = "American Samoa")]
-        AS,
+        AS = 3,
 
         [Display(Name = "Arizona")]
-        AZ,
+        AZ = 4,
 
         [Display(Name = "Arkansas")]
-        AR,
+        AR = 5,
 
         [Display(Name = "California")]
-        CA,
+        CA = 6,
 
         [Display(Name = "Colorado")]
-        CO,
+        CO = 7,
 
         [Display(Name = "Conneticut")]
-        CT,
+        CT = 8,
 
         [Display(Name = "Delaware")]
-        DE,
+        DE = 9,
 
         [Display(Name = "District of Columbia")]
-        DC,
+        DC = 10,
 
         [Display(Name = "Federated States of Micronesia")]
-        FM,
+        FM = 11,
 
         [Display(Name = "Florida")]
-        FL,
+        FL = 12,
 
         [Display(Name = "Georgia")]
-        GA,
+        GA = 13,
 
         [Display(Name = "Guam")]
-        GU,
+        GU = 14,
 
         [Display(Name = "Hawaii")]
-        HI,
+        HI = 15,
 
         [Display(Name = "Idaho")]
-        ID,
+        ID = 16,
 
         [Display(Name = "Illinois")]
-        IL,
+        IL = 17,
 
         [Display(Name = "Indiana")]
-        IN,
+        IN = 18,
 
         [Display(Name = "Iowa")]
-        IA,
+        IA = 19,
 
         [Display(Name = "Kansas")]
-        KS,
+        KS = 20,
 
         [Display(Name = "Kentucky")]
-        KY,
+        KY = 21,
 
         [Display(Name = "Louisiana")]
-        LA,
+        LA = 22,
 
         [Display(Name = "Maine")]
-        ME,
+        ME = 23,
 
         [Display(Name = "Marshall Islands")]
-        MH,
+        MH = 24,
 
         [Display(Name = "Maryland")]
-        MD,
+        MD = 25,
 
         [Display(Name = "Massachusetts")]
-        MA,
+        MA = 26,
 
         [Display(Name = "Michigan")]
-        MI,
+        MI = 27,
 
         [Display(Name = "Minnesota")]
-        MN,
+        MN = 28,
 
         [Display(Name = "Mississippi")]
-        MS,
+        MS = 29,
 
         [Display(Name = "Missouri")]
-        MO,
+        MO = 30,
 
         [Display(Name = "Montana")]
-        MT,
+        MT = 31,
 
         [Display(Name = "Nebraska")]
-        NE,
+        NE = 32,
 
         [Display(Name = "Nevada")]
-        NV,
+        NV = 33,
 
         [Display(Name = "New Hampshire")]
-        NH,
+        NH = 34,
 
         [Display(Name = "New Jersey")]
-        NJ,
+        NJ = 35,
 
         [Display(Name = "New Mexico")]
-        NM,
+        NM = 36,
 
         [Display(Name = "New York")]
-        NY,
+        NY = 37,
 
         [Display(Name = "North Carolina")]
-        NC,
+        NC = 38,
 
         [Display(Name = "North Dakota")]
-        ND,
+        ND = 39,
 
         [Display(Name = "Northern Mariana Islands")]
-        MP,
+        MP = 40,
 
         [Display(Name = "Ohio")]
-        OH,
+        OH = 41,
 
         [Display(Name = "Oklahoma")]
-        OK,
+        OK = 42,
 
         [Display(Name = "Oregon")]
-        OR,
+        OR = 43,
 
         [Display(Name = "Palau")]
-        PW,
+        PW = 44,
 
         [Display(Name = "Pennsylvania")]
-        PA,
+        PA = 45,
 
         [Display(Name = "Puerto Rico")]
-        PR,
+        PR = 46,
 
         [Display(Name = "Rhode Island")]
-        RI,
+        RI = 47,
 
         [Display(Name = "South Carolina")]
-        SC,
+        SC = 48,
 
         [Display(Name = "South Dakota")]
-        SD,
+        SD = 49,
 
         [Display(Name = "Tennesse")]
-        TN,
+        TN = 50,
 
         [Display(Name = "Texas")]
-        TX,
+        TX = 51,
 
         [Display(Name = "Utah")]
-        UT,
+        UT = 52,
 
         [Display(Name = "Vermont")]
-        VT,
+        VT = 53,
 
         [Display(Name = "Virgin Islands")]
-        VI,
+        VI = 54,
 
         [Display(Name = "Virginia")]
-        VA,
+        VA = 55,
 
         [Display(Name = "Washington")]
-        WA,
+        WA = 56,
 
         [Display(Name = "West Virginia")]
-        WV,
+        WV = 57,
 
         [Display(Name = "Wisconsin")]
-        WI,
+        WI = 58,
 
         [Display(Name = "Wyoming")]
-        WY
+        WY = 59
     }
 
     public static class States
