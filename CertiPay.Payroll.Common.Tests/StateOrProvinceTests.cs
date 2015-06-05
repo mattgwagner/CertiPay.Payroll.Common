@@ -41,5 +41,17 @@ namespace CertiPay.Payroll.Common.Tests
 
             Assert.AreEqual(state, find_by_name);
         }
+
+        [Theory]
+        public void Should_Match_State_By_Display_Name(StateOrProvince state)
+        {
+            Assert.AreEqual(state, States.Parse(state.DisplayName()));
+        }
+
+        [Theory]
+        public void Should_Match_State_By_Abbreviation(StateOrProvince state)
+        {
+            Assert.AreEqual(state, States.Parse(state.ToString()));
+        }
     }
 }

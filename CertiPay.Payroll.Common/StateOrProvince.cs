@@ -188,6 +188,9 @@ namespace CertiPay.Payroll.Common
 
     public static class States
     {
+        /// <summary>
+        /// Returns the list of States
+        /// </summary>
         public static IEnumerable<StateOrProvince> Values()
         {
             foreach (var state in Enum.GetValues(typeof(StateOrProvince)))
@@ -196,6 +199,24 @@ namespace CertiPay.Payroll.Common
             }
         }
 
+        /// <summary>
+        /// Returns the state by either the abbreviation or display name
+        /// </summary>
+        public static StateOrProvince Parse(string value)
+        {
+            StateOrProvince state;
+
+            if (!Enum.TryParse<StateOrProvince>(value, ignoreCase: true, result: out state))
+            {
+                state = GetStateByName(value);
+            }
+
+            return state;
+        }
+
+        /// <summary>
+        /// Returns the state by the display name
+        /// </summary>
         public static StateOrProvince GetStateByName(string name)
         {
             var value = from state in Values()
@@ -205,6 +226,9 @@ namespace CertiPay.Payroll.Common
             return value.SingleOrDefault();
         }
 
+        /// <summary>
+        /// Returns the Display Name for the StateOrProvince (i.e. FL -> Florida)
+        /// </summary>
         public static String DisplayName(this StateOrProvince state)
         {
             return state.Display(e => e.Name);
