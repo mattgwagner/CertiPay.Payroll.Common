@@ -8,6 +8,8 @@ namespace CertiPay.Payroll.Common
 {
     public enum StateOrProvince : byte
     {
+        Unknown = 0,
+
         [Display(Name = "Alabama")]
         AL = 1,
 
