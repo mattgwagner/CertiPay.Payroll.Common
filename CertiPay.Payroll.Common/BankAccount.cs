@@ -55,25 +55,20 @@ namespace CertiPay.Payroll.Common
 
                 String checkDigit = routingNumber.Substring(8, 1);
 
-                return checkDigit == GetCheckDigit(routingNumber);
+                // The ninth, check digit provides a checksum test using a position-weighted sum of each of the digits.
+                // High - speed check - sorting equipment will typically verify the checksum and if it fails, route the item
+                // to a reject pocket for manual examination, repair, and re - sorting.Mis - routings to an incorrect bank are thus greatly reduced.
+
+                int section_one = 3 * (Convert.ToInt32(routingNumber[0]) + Convert.ToInt32(routingNumber[3]) + Convert.ToInt32(routingNumber[6]));
+
+                int section_two = 7 * (Convert.ToInt32(routingNumber[1]) + Convert.ToInt32(routingNumber[4]) + Convert.ToInt32(routingNumber[7]));
+
+                int section_three = 1 * (Convert.ToInt32(routingNumber[2]) + Convert.ToInt32(routingNumber[5]) + Convert.ToInt32(routingNumber[8]));
+
+                return ((section_one + section_two + section_three) % 10) == 0;
             }
 
             return false;
-        }
-
-        private static String GetCheckDigit(String routingNumber)
-        {
-            //The ninth, check digit provides a checksum test using a position-weighted sum of each of the digits.
-            // High - speed check - sorting equipment will typically verify the checksum and if it fails, route the item
-            // to a reject pocket for manual examination, repair, and re - sorting.Mis - routings to an incorrect bank are thus greatly reduced.
-
-            // Checksum = 3x(d[1] + d[4] + d[7]) + 7x(d[2] + d[5] + d[8]) + (d[3] + d[6] + d[9]) % 10 == 0
-
-            return (
-                (3 * (Convert.ToInt32(routingNumber[0]) + Convert.ToInt32(routingNumber[3]) + Convert.ToInt32(routingNumber[6])))
-                + (7 * (Convert.ToInt32(routingNumber[6]) + Convert.ToInt32(routingNumber[4]) + Convert.ToInt32(routingNumber[7])))
-                + ((Convert.ToInt32(routingNumber[2]) + Convert.ToInt32(routingNumber[5]) + Convert.ToInt32(routingNumber[8]))))
-                .ToString();
         }
     }
 }

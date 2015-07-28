@@ -10,6 +10,7 @@ namespace CertiPay.Payroll.Common.Tests
         [TestCase("021000021", true)] // JPMorgan
         [TestCase("053100465", true)] // SunTrust
         [TestCase("263177563", true)] // MIDFLORIDA
+        [TestCase("314074269", true)] // USAA
         
         [TestCase("100000007", false)]
         [TestCase("111111118", false)]
