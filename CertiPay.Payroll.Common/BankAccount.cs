@@ -59,11 +59,11 @@ namespace CertiPay.Payroll.Common
                 // High - speed check - sorting equipment will typically verify the checksum and if it fails, route the item
                 // to a reject pocket for manual examination, repair, and re - sorting.Mis - routings to an incorrect bank are thus greatly reduced.
 
-                int section_one = 3 * (Convert.ToInt32(routingNumber[0]) + Convert.ToInt32(routingNumber[3]) + Convert.ToInt32(routingNumber[6]));
+                int section_one = 3 * (int.Parse(routingNumber[0] + "") + int.Parse(routingNumber[3] + "") + int.Parse(routingNumber[6] + ""));
 
-                int section_two = 7 * (Convert.ToInt32(routingNumber[1]) + Convert.ToInt32(routingNumber[4]) + Convert.ToInt32(routingNumber[7]));
+                int section_two = 7 * (int.Parse(routingNumber[1] + "") + int.Parse(routingNumber[4] + "") + int.Parse(routingNumber[7] + ""));
 
-                int section_three = 1 * (Convert.ToInt32(routingNumber[2]) + Convert.ToInt32(routingNumber[5]) + Convert.ToInt32(routingNumber[8]));
+                int section_three = 1 * (int.Parse(routingNumber[2] + "") + int.Parse(routingNumber[5] + "") + int.Parse(routingNumber[8] + ""));
 
                 return ((section_one + section_two + section_three) % 10) == 0;
             }

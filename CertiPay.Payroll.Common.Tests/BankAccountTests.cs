@@ -11,11 +11,12 @@ namespace CertiPay.Payroll.Common.Tests
         [TestCase("053100465", true)] // SunTrust
         [TestCase("263177563", true)] // MIDFLORIDA
         [TestCase("314074269", true)] // USAA
-        
-        [TestCase("100000007", false)]
-        [TestCase("111111118", false)]
-        [TestCase("100000007", false)]
-        [TestCase("100000007", false)]
+
+        [TestCase("000000001", false)]
+        [TestCase("123456789", false)]
+        [TestCase("111111117", false)]
+        [TestCase("100000009", false)]
+        [TestCase("101010101", false)]
         public void Validate_Routing_Number(String routingNumber, Boolean is_valid)
         {
             Assert.AreEqual(is_valid, BankAccount.IsValidRoutingNumber(routingNumber), "Routing # validation failed");
