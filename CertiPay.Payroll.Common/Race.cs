@@ -15,40 +15,60 @@ namespace CertiPay.Payroll.Common
     /// </summary>
     public enum Race : byte
     {
+        /// <summary>
+        /// No race specified
+        /// </summary>
         [Display(Name = "Not Specified")]
         NotSpecified = 0,
 
-        //Hispanic or Latino - A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race.
+        /// <summary>
+        /// Hispanic or Latino - A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race.
+        /// <summary>
         [Display(Name = "Hispanic or Latino")]
         HispanicOrLatino = 1,
 
-        //White (Not Hispanic or Latino) - A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+        /// <summary>
+        /// White (Not Hispanic or Latino) - A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+        /// <summary>
         [Display(Name = "White (Not Hispanic or Latino)")]
         White = 2,
 
-        //Black or African American (Not Hispanic or Latino) - A person having origins in any of the black racial groups of Africa.
+        /// <summary>
+        /// Black or African American (Not Hispanic or Latino) - A person having origins in any of the black racial groups of Africa.
+        /// <summary>
         [Display(Name = "Black or African American (Not Hispanic or Latino)")]
         BlackOrAfricanAmerican = 3,
 
-        //Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) - A person having origins in any of the peoples of Hawaii, Guam, Samoa, or other Pacific Islands.
+        /// <summary>
+        /// Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino) - A person having origins in any of the peoples of Hawaii, Guam, Samoa, or other Pacific Islands.
+        /// <summary>
         [Display(Name = "Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)")]
         NativeHawaiianOrPacificIslander = 4,
 
-        //Asian (Not Hispanic or Latino) - A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian Subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.
+        /// <summary>
+        /// Asian (Not Hispanic or Latino) - A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian Subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.
+        /// <summary>
         [Display(Name = "Asian (Not Hispanic or Latino)")]
         Asian = 5,
 
-        //American Indian or Alaska Native (Not Hispanic or Latino) - A person having origins in any of the original peoples of North and South America (including Central America), and who maintain tribal affiliation or community attachment.
+        /// <summary>
+        /// American Indian or Alaska Native (Not Hispanic or Latino) - A person having origins in any of the original peoples of North and South America (including Central America), and who maintain tribal affiliation or community attachment.
+        /// <summary>
         [Display(Name = "American Indian or Alaska Native (Not Hispanic or Latino)")]
         AmericanIndianOrAlaskaNative = 6,
 
-        //Two or More Races (Not Hispanic or Latino) - All persons who identify with more than one of the above five races.
+        /// <summary>
+        /// Two or More Races (Not Hispanic or Latino) - All persons who identify with more than one of the above five races.
+        /// </summary>
         [Display(Name = "Two or More Races (Not Hispanic or Latino)")]
         TwoOrMoreRaces = 7
     }
 
     public static class Races
     {
+        /// <summary>
+        /// Returns all of the configured race enumeration values
+        /// </summary>
         public static IEnumerable<Race> Values()
         {
             yield return Race.NotSpecified;
