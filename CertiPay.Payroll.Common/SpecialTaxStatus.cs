@@ -56,11 +56,21 @@ namespace CertiPay.Payroll.Common
         /// Entity is exempt from paying FUTA tax (an employer-only tax)
         /// </summary>
         [Display(Name = "Exempt from Federal Unemployment Tax")]
-        ExemptFromFUTA = 1 << 6
+        ExemptFromFUTA = 1 << 6,
+
+
+        /// <summary>
+        /// Entity is exempt from all taxes
+        /// </summary>
+        [Display(Name = "Non-Taxable")]
+        NonTaxable = ExemptFromSocialSecurity | ExemptFromMedicare | ExemptFromFederalTax | ExemptFromStateTax | ExemptFromLocalTax | ExemptFromFUTA
     }
 
     public class SpecialTaxStatuses
     {
+        /// <summary>
+        /// Returns all of the special tax statuses configured
+        /// </summary>
         public static IEnumerable<SpecialTaxStatus> Values()
         {
             yield return SpecialTaxStatus.None;
@@ -71,6 +81,7 @@ namespace CertiPay.Payroll.Common
             yield return SpecialTaxStatus.ExemptFromStateTax;
             yield return SpecialTaxStatus.ExemptFromLocalTax;
             yield return SpecialTaxStatus.ExemptFromFUTA;
+            yield return SpecialTaxStatus.NonTaxable;
         }
     }
 }

@@ -31,5 +31,11 @@ namespace CertiPay.Payroll.Common.Tests
         {
             Assert.IsFalse(flags.HasFlag(should_not_have));
         }
+
+        [Theory]
+        public void NonTaxable_Should_Be_Exempt_From_All(SpecialTaxStatus flag)
+        {
+            Assert.IsTrue(SpecialTaxStatus.NonTaxable.HasFlag(flag));
+        }
     }
 }
