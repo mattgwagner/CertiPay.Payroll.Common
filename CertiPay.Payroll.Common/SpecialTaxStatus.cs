@@ -58,7 +58,6 @@ namespace CertiPay.Payroll.Common
         [Display(Name = "Exempt from Federal Unemployment Tax")]
         ExemptFromFUTA = 1 << 6,
 
-
         /// <summary>
         /// Entity is exempt from all taxes
         /// </summary>

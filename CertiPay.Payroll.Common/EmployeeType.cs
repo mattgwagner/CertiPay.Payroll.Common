@@ -27,7 +27,7 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Worker is listed as a contract employee and does not receive benefits or tax considerations as employees do
         /// </summary>
-        Contactor = 3
+        Contractor = 3
     }
 
     public static class EmployeeTypes
@@ -36,7 +36,7 @@ namespace CertiPay.Payroll.Common
         {
             yield return EmployeeType.FullTime;
             yield return EmployeeType.PartTime;
-            yield return EmployeeType.Contactor;
+            yield return EmployeeType.Contractor;
         }
     }
 }
