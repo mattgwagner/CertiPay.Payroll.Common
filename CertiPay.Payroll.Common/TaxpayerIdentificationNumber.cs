@@ -1,14 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace CertiPay.Payroll.Common
 {
     public class TaxpayerIdentificationNumber
     {
+        private String _value = string.Empty;
+
         [StringLength(9)]
         [Display(Name = "Taxpayer Identification Number")]
-        public String Value { get; set; }
+        public String Value
+        {
+            get { return _value; }
+            set
+            {
+                // Strip out non-digit characters when setting
+
+                char[] arr = (value ?? String.Empty).ToCharArray();
+
+                arr = arr.Where(c => char.IsDigit(c)).ToArray();
+
+                _value = new string(arr);
+            }
+        }
 
         public TINType Type { get; set; }
 
