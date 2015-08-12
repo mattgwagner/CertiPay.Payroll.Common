@@ -11,11 +11,11 @@
         /// <summary>
         /// Employee is allowed to earn overtime for performing the work in excess of 40 hours in one week
         /// </summary>
-        Nonexempt,
+        Nonexempt = 0,
 
         /// <summary>
         /// Employee is not allowed or exempt from earning overtime for performing work in excess of 40 hours in one week
         /// </summary>
-        Exempt
+        Exempt = 1
     }
 }
