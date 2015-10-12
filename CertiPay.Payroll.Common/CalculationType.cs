@@ -8,9 +8,6 @@ namespace CertiPay.Payroll.Common
     /// </summary>
     public enum CalculationType : byte
     {
-        // TODO: We might implement some other calculation methods as needed?
-        // Percent of Special Earnings: Select to calculate the deduction as a percent of a special accumulator, such as 401(k).
-
         /// <summary>
         /// Deduction is taken as a percentage of the gross pay
         /// </summary>
