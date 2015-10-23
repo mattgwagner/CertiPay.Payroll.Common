@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BankAccount.cs" />
     <Compile Include="CalculationType.cs" />
+    <Compile Include="DistributionDestinationType.cs" />
     <Compile Include="FLSAStatus.cs" />
     <Compile Include="GarnishmentType.cs" />
     <Compile Include="DistributionType.cs" />
