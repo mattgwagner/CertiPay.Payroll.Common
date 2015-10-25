@@ -9,7 +9,9 @@ namespace CertiPay.Payroll.Common
     {
         private String _value = string.Empty;
 
-        [StringLength(9)]
+        // We're allowing up to 12 in TIN value because it's common to use 'Applied For' for new companies on certain documents
+
+        [StringLength(12)]
         [Display(Name = "Taxpayer Identification Number")]
         public String Value
         {
@@ -51,6 +53,9 @@ namespace CertiPay.Payroll.Common
 
         public enum TINType : byte
         {
+            /// <summary>
+            /// A number in the format 000-00-0000, unique for each individual, used to track Social Security benefits and for other identification purposes.
+            /// </summary>
             [Display(Name = "Social Security Number")]
             SSN = 1,
 
