@@ -7,8 +7,6 @@ namespace CertiPay.Payroll.Common
     [ComplexType]
     public class BankAccount
     {
-        // TODO Code to check for validity of MICR number?
-
         /// <summary>
         /// The 9-digit routing number that identifies the financial institution that manages the account
         /// </summary>
