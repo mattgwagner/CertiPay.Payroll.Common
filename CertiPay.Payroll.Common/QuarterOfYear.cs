@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CertiPay.Payroll.Common
 {
@@ -10,21 +11,25 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// January, February, March
         /// </summary>
+        [Display(Name = "Q1 (January, February, March)")]
         Q1 = 1,
 
         /// <summary>
         /// April, May, June
         /// </summary>
+        [Display(Name = "Q2 (April, May, June)")]
         Q2 = 2,
 
         /// <summary>
         /// July, August, September
         /// </summary>
+        [Display(Name = "Q3 (July, August, September)")]
         Q3 = 3,
 
         /// <summary>
         /// October, November, December
         /// </summary>
+        [Display(Name = "Q4 (October, November, December)")]
         Q4 = 4
     }
 
