@@ -35,7 +35,7 @@ namespace CertiPay.Payroll.Common.Tests
         [TestCase("1/10/2015", QuarterOfYear.Q1)]
         [TestCase("10/1/2015", QuarterOfYear.Q4)]
         [TestCase("3/15/2015", QuarterOfYear.Q1)]
-        [TestCase("9/30/2015", QuarterOfYear.Q3s)]
+        [TestCase("9/30/2015", QuarterOfYear.Q3)]
         public void Returns_Expected_Quarter(String date, QuarterOfYear expected)
         {
             Assert.AreEqual(expected, DateTime.Parse(date).GetQuarter());
