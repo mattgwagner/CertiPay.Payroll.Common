@@ -27,13 +27,19 @@ namespace CertiPay.Payroll.Common
 
         private static readonly DateTime StartDate = DateTime.Parse("1/1/2015");
 
-        private static readonly DateTime StopDate = DateTime.Parse("12/31/2020");
+        private static readonly DateTime StopDate = DateTime.Parse("12/31/2018");
 
+        /// <summary>
+        /// Returns holidays observed after the given date
+        /// </summary>
         public static IEnumerable<Holiday> After(DateTime after)
         {
             return Values.Where(_ => _.Date > after);
         }
 
+        /// <summary>
+        /// Returns a list of all holidays in the system through the programmed stop date (12/31/2018)
+        /// </summary>
         public static IEnumerable<Holiday> Values
         {
             get
