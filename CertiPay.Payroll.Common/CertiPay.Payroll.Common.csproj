@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankAccount.cs" />
+    <Compile Include="BankHolidays.cs" />
     <Compile Include="CalculationType.cs" />
     <Compile Include="DistributionDestinationType.cs" />
     <Compile Include="FLSAStatus.cs" />
