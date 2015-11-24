@@ -78,14 +78,17 @@ namespace CertiPay.Payroll.Common
             /// </summary>
             public String Description { get; internal set; }
 
-            // TODO Should we also include what day it would be observed? i.e. Veterans Day to weekday if weekend, July 4th to month if sunday
+            /// <summary>
+            /// The date that the holiday will be observed
+            /// (i.e. some federal holidays are moved to week days)
+            /// </summary>
+            public DateTime ObservedOn { get; internal set; }
 
-            // public DateTime Observed { get; internal set; }
-
-            internal Holiday(String description, DateTime date)
+            internal Holiday(String description, DateTime date, DateTime? observedOn = null)
             {
                 this.Description = description;
                 this.Date = date;
+                this.ObservedOn = observedOn ?? date;
             }
         }
 
@@ -95,10 +98,14 @@ namespace CertiPay.Payroll.Common
             {
                 // Observed: to weekday if weekend
 
-                for (int year = StartDate.Year; year <= StopDate.Year; year++)
-                {
-                    yield return new Holiday("New Year's Day", new DateTime(year, 1, 1));
-                }
+                String description = "New Year's Day";
+
+                yield return new Holiday(description, new DateTime(2015, (int)Month.January, 1));
+                yield return new Holiday(description, new DateTime(2016, (int)Month.January, 1));
+                yield return new Holiday(description, new DateTime(2017, (int)Month.January, 1), new DateTime(2017, (int)Month.January, 2));
+                yield return new Holiday(description, new DateTime(2018, (int)Month.January, 1));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.January, 1));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.January, 1));
             }
         }
 
@@ -159,10 +166,14 @@ namespace CertiPay.Payroll.Common
             {
                 // Observed: to monday if sunday
 
-                for (int year = StartDate.Year; year <= StopDate.Year; year++)
-                {
-                    yield return new Holiday("New Year's Day", new DateTime(year, (int)Month.July, 4));
-                }
+                String description = "Independence Day";
+
+                yield return new Holiday(description, new DateTime(2015, (int)Month.July, 4), new DateTime(2015, (int)Month.July, 3));
+                yield return new Holiday(description, new DateTime(2016, (int)Month.July, 4));
+                yield return new Holiday(description, new DateTime(2017, (int)Month.July, 4));
+                yield return new Holiday(description, new DateTime(2018, (int)Month.July, 4));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.July, 4));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.July, 4), new DateTime(2020, (int)Month.July, 3));
             }
         }
 
@@ -206,10 +217,14 @@ namespace CertiPay.Payroll.Common
             {
                 // Observed: to weekday if weekend
 
-                for (int year = StartDate.Year; year <= StopDate.Year; year++)
-                {
-                    yield return new Holiday("Veterans Day", new DateTime(year, (int)Month.November, 11));
-                }
+                String description = "Veterans Day";
+
+                yield return new Holiday(description, new DateTime(2015, (int)Month.November, 11));
+                yield return new Holiday(description, new DateTime(2016, (int)Month.November, 11));
+                yield return new Holiday(description, new DateTime(2017, (int)Month.November, 11), new DateTime(2017, (int)Month.November, 10));
+                yield return new Holiday(description, new DateTime(2018, (int)Month.November, 11), new DateTime(2018, (int)Month.November, 12));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.November, 11));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.November, 11));
             }
         }
 
@@ -236,10 +251,14 @@ namespace CertiPay.Payroll.Common
             {
                 // Observed: to weekday if weekend
 
-                for (int year = StartDate.Year; year <= StopDate.Year; year++)
-                {
-                    yield return new Holiday("Christmas Day", new DateTime(year, (int)Month.December, 25));
-                }
+                String description = "Christmas Day";
+
+                yield return new Holiday(description, new DateTime(2015, (int)Month.December, 25));
+                yield return new Holiday(description, new DateTime(2016, (int)Month.December, 25), new DateTime(2016, (int)Month.December, 26));
+                yield return new Holiday(description, new DateTime(2017, (int)Month.December, 25));
+                yield return new Holiday(description, new DateTime(2018, (int)Month.December, 25));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.December, 25));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.December, 25));
             }
         }
     }
