@@ -26,6 +26,14 @@ namespace CertiPay.Payroll.Common
         //President’s Day for the observance of George Washington’s Birthday.
 
         /// <summary>
+        /// Returns holidays between the given dates inclusive
+        /// </summary>
+        public static IEnumerable<Holiday> Between(DateTime after, DateTime before)
+        {
+            return Values.Where(_ => _.Date >= after).Where(_ => _.Date <= before);
+        }
+
+        /// <summary>
         /// Returns holidays observed after the given date
         /// </summary>
         public static IEnumerable<Holiday> After(DateTime after)
