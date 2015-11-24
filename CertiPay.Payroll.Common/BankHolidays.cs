@@ -25,10 +25,6 @@ namespace CertiPay.Payroll.Common
         //the holiday calendar of the U.S.Federal Reserve. They tend to use the modern
         //President’s Day for the observance of George Washington’s Birthday.
 
-        private static readonly DateTime StartDate = DateTime.Parse("1/1/2015");
-
-        private static readonly DateTime StopDate = DateTime.Parse("12/31/2020");
-
         /// <summary>
         /// Returns holidays observed after the given date
         /// </summary>
