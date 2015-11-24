@@ -68,8 +68,14 @@ namespace CertiPay.Payroll.Common
         /// </summary>
         public class Holiday
         {
+            /// <summary>
+            /// The date of the actual holiday (NOT THE OBSERVED DATE)
+            /// </summary>
             public DateTime Date { get; internal set; }
 
+            /// <summary>
+            /// The name describing the holiday
+            /// </summary>
             public String Description { get; internal set; }
 
             // TODO Should we also include what day it would be observed? i.e. Veterans Day to weekday if weekend, July 4th to month if sunday
