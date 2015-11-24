@@ -55,6 +55,7 @@
     <Compile Include="EmployeeTaxFilingStatus.cs" />
     <Compile Include="Gender.cs" />
     <Compile Include="MaritalStatus.cs" />
+    <Compile Include="Month.cs" />
     <Compile Include="QuarterOfYear.cs" />
     <Compile Include="Race.cs" />
     <Compile Include="SpecialTaxStatus.cs" />
