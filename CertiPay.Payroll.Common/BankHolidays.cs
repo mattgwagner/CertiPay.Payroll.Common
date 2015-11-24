@@ -27,7 +27,7 @@ namespace CertiPay.Payroll.Common
 
         private static readonly DateTime StartDate = DateTime.Parse("1/1/2015");
 
-        private static readonly DateTime StopDate = DateTime.Parse("12/31/2018");
+        private static readonly DateTime StopDate = DateTime.Parse("12/31/2020");
 
         /// <summary>
         /// Returns holidays observed after the given date
@@ -38,7 +38,7 @@ namespace CertiPay.Payroll.Common
         }
 
         /// <summary>
-        /// Returns a list of all holidays in the system through the programmed stop date (12/31/2018)
+        /// Returns a list of all holidays in the system through the programmed stop date (12/31/2020)
         /// </summary>
         public static IEnumerable<Holiday> Values
         {
@@ -114,6 +114,8 @@ namespace CertiPay.Payroll.Common
                 yield return new Holiday(description, new DateTime(2016, (int)Month.January, 18));
                 yield return new Holiday(description, new DateTime(2017, (int)Month.January, 16));
                 yield return new Holiday(description, new DateTime(2018, (int)Month.January, 15));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.January, 21));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.January, 20));
             }
         }
 
@@ -129,6 +131,8 @@ namespace CertiPay.Payroll.Common
                 yield return new Holiday(description, new DateTime(2016, (int)Month.February, 15));
                 yield return new Holiday(description, new DateTime(2017, (int)Month.February, 20));
                 yield return new Holiday(description, new DateTime(2018, (int)Month.February, 19));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.February, 17));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.February, 18));
             }
         }
 
@@ -144,6 +148,8 @@ namespace CertiPay.Payroll.Common
                 yield return new Holiday(description, new DateTime(2016, (int)Month.May, 30));
                 yield return new Holiday(description, new DateTime(2017, (int)Month.May, 29));
                 yield return new Holiday(description, new DateTime(2018, (int)Month.May, 28));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.May, 27));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.May, 25));
             }
         }
 
@@ -172,6 +178,8 @@ namespace CertiPay.Payroll.Common
                 yield return new Holiday(description, new DateTime(2016, (int)Month.September, 5));
                 yield return new Holiday(description, new DateTime(2017, (int)Month.September, 4));
                 yield return new Holiday(description, new DateTime(2018, (int)Month.September, 3));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.September, 2));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.September, 7));
             }
         }
 
@@ -187,6 +195,8 @@ namespace CertiPay.Payroll.Common
                 yield return new Holiday(description, new DateTime(2016, (int)Month.October, 10));
                 yield return new Holiday(description, new DateTime(2017, (int)Month.October, 9));
                 yield return new Holiday(description, new DateTime(2018, (int)Month.October, 8));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.October, 14));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.October, 12));
             }
         }
 
@@ -215,6 +225,8 @@ namespace CertiPay.Payroll.Common
                 yield return new Holiday(description, new DateTime(2016, (int)Month.November, 24));
                 yield return new Holiday(description, new DateTime(2017, (int)Month.November, 23));
                 yield return new Holiday(description, new DateTime(2018, (int)Month.November, 22));
+                yield return new Holiday(description, new DateTime(2019, (int)Month.November, 28));
+                yield return new Holiday(description, new DateTime(2020, (int)Month.November, 26));
             }
         }
 
