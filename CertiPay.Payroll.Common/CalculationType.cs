@@ -33,9 +33,9 @@ namespace CertiPay.Payroll.Common
         FixedHourlyAmount = 4,
 
         /// <summary>
-        /// Deduction is taken as a percentage of the disposible income (gross pay - payroll taxes)
+        /// Deduction is taken as a percentage of the disposable income (gross pay - payroll taxes)
         /// </summary>
-        PercentOfDisposibleIncome
+        PercentOfDisposableIncome
     }
 
     public static class CalculationTypes
@@ -46,7 +46,7 @@ namespace CertiPay.Payroll.Common
             yield return CalculationType.PercentOfNetPay;
             yield return CalculationType.FixedAmount;
             yield return CalculationType.FixedHourlyAmount;
-            yield return CalculationType.PercentOfDisposibleIncome;
+            yield return CalculationType.PercentOfDisposableIncome;
         }
     }
 }
