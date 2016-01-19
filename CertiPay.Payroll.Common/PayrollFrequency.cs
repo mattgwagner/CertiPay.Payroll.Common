@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CertiPay.Payroll.Common
 {
@@ -16,21 +17,25 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Every week, i.e. every Friday
         /// </summary>
+        [Display(Name = "Every week")]
         Weekly = 2,
 
         /// <summary>
         /// Every second week, i.e. every other Friday
         /// </summary>
+        [Display(Name = "Every other week")]
         BiWeekly = 3,
 
         /// <summary>
         /// Twice per month, i.e. 1st and 15th
         /// </summary>
+        [Display(Name = "Twice per month")]
         SemiMonthly = 4,
 
         /// <summary>
         /// Once per month, i.e. 1st of the month
         /// </summary>
+        [Display(Name = "Once per month")]
         Monthly = 5,
 
         /// <summary>
