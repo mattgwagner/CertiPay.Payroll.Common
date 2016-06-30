@@ -66,7 +66,7 @@ namespace CertiPay.Payroll.Common
         ///
         /// If no year is provided, it will return for the current year
         /// </summary>
-        public static DateTime End(this QuarterOfYear quarter, int? year = 0)
+        public static DateTime End(this QuarterOfYear quarter, int? year = null)
         {
             switch (quarter)
             {
