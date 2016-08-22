@@ -35,11 +35,15 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// Deduction is taken as a percentage of the disposable income (gross pay - payroll taxes)
         /// </summary>
-        PercentOfDisposableIncome
+        [Display(Name = "Percent of Disposable Income")]
+        PercentOfDisposableIncome = 5
     }
 
     public static class CalculationTypes
     {
+        /// <summary>
+        /// Returns a list of the available calculation types
+        /// </summary>
         public static IEnumerable<CalculationType> Values()
         {
             yield return CalculationType.PercentOfGrossPay;
