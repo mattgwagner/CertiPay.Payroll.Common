@@ -8,6 +8,13 @@ namespace CertiPay.Payroll.Common
     public class BankAccount
     {
         /// <summary>
+        /// Human readable name for the Account Number
+        /// </summary>
+        [Display(Name = "Account Name", ShortName = "Acct Name")]
+        [StringLength(9)]
+        public String AccountName { get; set; }
+
+        /// <summary>
         /// The 9-digit routing number that identifies the financial institution that manages the account
         /// </summary>
         [Display(Name = "Routing Number", ShortName = "MICR #")]
