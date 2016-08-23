@@ -11,7 +11,7 @@ namespace CertiPay.Payroll.Common
         /// Human readable name for the Account Number
         /// </summary>
         [Display(Name = "Account Name", ShortName = "Acct Name")]
-        [StringLength(9)]
+        [StringLength(50)]
         public String AccountName { get; set; }
 
         /// <summary>
