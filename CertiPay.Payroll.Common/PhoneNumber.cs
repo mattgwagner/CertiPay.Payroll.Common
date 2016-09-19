@@ -14,6 +14,9 @@ namespace CertiPay.Payroll.Common
     {
         private String _number = String.Empty;
 
+        /// <summary>
+        /// The phone number, with non-digit (i.e. (, ), -) characters removed
+        /// </summary>
         [DataType(DataType.PhoneNumber)]
         [StringLength(15)]
         public String Number
@@ -31,16 +34,20 @@ namespace CertiPay.Payroll.Common
             }
         }
 
+        /// <summary>
+        /// The phone number's extension, if applicable
+        /// </summary>
         [StringLength(10)]
         public String Extension { get; set; }
 
-        public PhoneType PhoneType { get; set; }
+        /// <summary>
+        /// What type of phone number is this
+        /// </summary>
+        public PhoneType PhoneType { get; set; } = PhoneType.Default;
 
-        public PhoneNumber()
-        {
-            this.PhoneType = PhoneType.Default;
-        }
-
+        /// <summary>
+        /// Returns a human-readable, formatted phone number string
+        /// </summary>
         public override string ToString()
         {
             if (String.IsNullOrWhiteSpace(Number)) return String.Empty;
@@ -84,6 +91,9 @@ namespace CertiPay.Payroll.Common
         }
     }
 
+    /// <summary>
+    /// What type of phone number are we representing
+    /// </summary>
     public enum PhoneType : byte
     {
         /// <summary>
