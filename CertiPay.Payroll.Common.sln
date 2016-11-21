@@ -17,7 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{4A32B3
 		appveyor.yml = appveyor.yml
 		Build.bat = Build.bat
 		.build\Build.ps1 = .build\Build.ps1
-		CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec = CertiPay.Payroll.Common\CertiPay.Payroll.Common.nuspec
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 		.build\Test.ps1 = .build\Test.ps1
