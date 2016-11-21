@@ -244,7 +244,7 @@ namespace CertiPay.Payroll.Common
                 .GetTypeInfo()
                 .GetField(val.ToString())
                 .CustomAttributes
-                .OfType<DisplayAttribute>()
+                .Where(attr => attr.AttributeType == typeof(DisplayAttribute))
                 .FirstOrDefault();
 
             if (attribute != null)
