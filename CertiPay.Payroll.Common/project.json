@@ -26,7 +26,10 @@
     "net461": {},
 
     "netstandard1.6": {
-      "imports": "dnxcore50"
+      "imports": "dnxcore50",
+      "dependencies": {
+        "System.Reflection.Extensions": "4.0.1"
+      }
     }
   }
 }
