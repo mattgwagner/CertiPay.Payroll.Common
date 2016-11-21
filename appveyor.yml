@@ -21,16 +21,18 @@ platform: Any CPU
 # build Configuration, i.e. Debug, Release, etc.
 configuration: Release
 
-# to run your custom scripts instead of automatic MSBuild
-build_script:
-  - cmd: .\build.bat Package
-
 assembly_info:
   patch: true
   file: AssemblyInfo.*
   assembly_version: "{version}"
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
+
+before_build:
+- cmd: nuget restore
+
+build:
+  publish_nuget: true
 
 #---------------------------------#
 #       tests configuration       #
@@ -43,14 +45,6 @@ test:
 #---------------------------------#
 #       artifacts configuration   #
 #---------------------------------#
-
-nuget:
-  account_feed: true
-  project_feed: true
-  disable_publish_on_pr: true     # disable publishing of .nupkg artifacts to account/project feeds for pull request builds
-
-artifacts:
-  - path: '**\CertiPay.Payroll.Common.*.nupkg'
 
 deploy:
 - provider: NuGet
