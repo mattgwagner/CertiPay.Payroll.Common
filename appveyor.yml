@@ -46,7 +46,7 @@ artifacts:
 
 test:
   assemblies:
-    - CertiPay.Payroll.Common.Tests.dll
+    - *\win7-x64\CertiPay.Payroll.Common.Tests.dll
 
 #---------------------------------#
 #       artifacts configuration   #
