@@ -1,7 +1,6 @@
 ﻿{
   "dependencies": {
     "NUnit": "3.5.0",
-    "CertiPay.Common.Testing": "3.1.14",
     "NUnit.Console": "3.5.0",
     "CertiPay.Payroll.Common": "1.0.0-*"
   },
