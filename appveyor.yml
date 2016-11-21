@@ -32,7 +32,7 @@ before_build:
 - cmd: nuget restore
 
 after_build:
-- dotnet pack "CertiPay.Payroll.Common" --configuration %CONFIGURATION%
+- dotnet pack "CertiPay.Payroll.Common" --configuration %CONFIGURATION% --version-suffic %APPVEYOR_BUILD_NUMBER%
 
 build:
   publish_nuget: true
