@@ -23,7 +23,7 @@ $NUnit = Join-Path $SolutionRoot "packages\NUnit.ConsoleRunner.$NUnitVersion\too
 
 # Get any assembly matching "CertiPay.*.Tests.dll" for now
 
-$TestProjects = Get-ChildItem -Path "$SolutionRoot\**\bin\$Configuration" -Recurse -Include "CertiPay.*.Tests.dll"
+$TestProjects = Get-ChildItem -Path "$SolutionRoot\**\bin\$Configuration\**\win7-x64" -Recurse -Include "CertiPay.*.Tests.dll"
 
 # Install the NUnit Runner
 
