@@ -107,4 +107,4 @@ packages/*
 
 *.userprefs
 /.vs
-CertiPay.Payroll.Common/project.lock.json
+project.lock.json
