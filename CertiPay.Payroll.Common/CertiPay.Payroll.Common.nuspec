@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>CertiPay.Payroll.Common</id>
-    <version>1.0.0</version>
-    <title>CertiPay.Payroll.Common</title>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$id$</title>
     <tags>taxes, tax, payroll</tags>
     <description>This library is intended to hold some common items related to payroll processing, such as tax filing status or frequency.</description>
     <projectUrl>https://github.com/CertiPay/CertiPay.Payroll.Common</projectUrl>
