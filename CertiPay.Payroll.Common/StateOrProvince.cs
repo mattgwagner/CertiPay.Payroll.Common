@@ -244,7 +244,7 @@ namespace CertiPay.Payroll.Common
                 .GetTypeInfo()
                 .GetDeclaredField(val.ToString());
 
-            DisplayAttribute[] attributes = (DisplayAttribute[])fi.GetCustomAttributes(typeof(DisplayAttribute), false);
+            DisplayAttribute[] attributes = (DisplayAttribute[])fi.CustomAttributes.OfType<DisplayAttribute>();
 
             if (attributes != null && attributes.Length > 0)
             {
