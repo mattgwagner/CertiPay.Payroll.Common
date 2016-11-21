@@ -1,8 +1,8 @@
 ﻿{
   "dependencies": {
+    "CertiPay.Payroll.Common": "2.0.*",
     "NUnit": "3.5.0",
-    "NUnit.Console": "3.5.0",
-    "CertiPay.Payroll.Common": "1.0.0-*"
+    "NUnit.Console": "3.5.0"
   },
   "frameworks": {
     "net461": {}
