@@ -108,3 +108,4 @@ packages/*
 *.userprefs
 /.vs
 project.lock.json
+UnitTestResults.xml
