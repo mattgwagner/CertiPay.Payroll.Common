@@ -1,12 +1,12 @@
 ﻿{
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
+    "NUnit": "3.5.0",
+    "CertiPay.Common.Testing": "3.1.14",
+    "NUnit.Console": "3.5.0",
+    "CertiPay.Payroll.Common": "1.0.0-*"
   },
   "frameworks": {
-
-    "netstandard1.6": {
-      "imports": "dnxcore50"
-    }
+    "net461": {}
   },
   "version": "1.0.0-*"
 }
