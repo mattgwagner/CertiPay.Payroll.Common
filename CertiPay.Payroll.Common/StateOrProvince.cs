@@ -238,17 +238,18 @@ namespace CertiPay.Payroll.Common
 
         private static String Display(this Enum val, Func<DisplayAttribute, String> selector)
         {
-            FieldInfo fi = 
+            var attribute =
                 val
                 .GetType()
                 .GetTypeInfo()
-                .GetDeclaredField(val.ToString());
+                .GetField(val.ToString())
+                .CustomAttributes
+                .OfType<DisplayAttribute>()
+                .FirstOrDefault();
 
-            DisplayAttribute[] attributes = (DisplayAttribute[])fi.CustomAttributes.OfType<DisplayAttribute>();
-
-            if (attributes != null && attributes.Length > 0)
+            if (attribute != null)
             {
-                return selector.Invoke(attributes[0]);
+                return selector.Invoke(attribute);
             }
 
             return val.ToString();
