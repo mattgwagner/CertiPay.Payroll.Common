@@ -222,7 +222,7 @@ namespace CertiPay.Payroll.Common
         public static StateOrProvince GetStateByName(string name)
         {
             var value = from state in Values()
-                        where String.Equals(state.Display(e => e.Name), name, StringComparison.InvariantCultureIgnoreCase)
+                        where String.Equals(state.Display(e => e.Name), name, StringComparison.CurrentCultureIgnoreCase)
                         select state;
 
             return value.SingleOrDefault();
