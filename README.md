@@ -3,7 +3,7 @@
 ## Description
 
 CertiPay.Payroll.Common is a basic library that contains enumerations and classes typically found in a payroll system. It
-was built for use in our next-generation suite of payroll products for [CertiPay.com](http://www.certipay.com), a payroll
+was built for use in our next-generation suite of payroll products for [CertiPayOnline.com](http://www.CertiPayOnline.com), a payroll
 processing engine and service.
 
 ## Usage
