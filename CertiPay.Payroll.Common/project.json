@@ -16,11 +16,7 @@
   "frameworks": {
     "net461": {
       "frameworkAssemblies": {
-        "System.ComponentModel.DataAnnotations": "4.0.0.0",
-        "Microsoft.CSharp": "4.0.0.0",
-        "System.Reflection": "4.0.10.0",
-        "System.Runtime": "4.0.20.0",
-        "System.Text.RegularExpressions": "4.0.10.0"
+        "System.ComponentModel.DataAnnotations": "4.0.0.0"
       }
     },
 
