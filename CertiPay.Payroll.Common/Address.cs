@@ -53,5 +53,49 @@ namespace CertiPay.Payroll.Common
         {
             this.State = StateOrProvince.FL;
         }
+
+        public static bool operator ==(Address Left, Address Right)
+        {
+            if (ReferenceEquals(Left,Right))
+            {
+                return true;
+            }
+            if ((object)Left == null || (object)Right == null)
+            {
+                return false;
+            }
+
+            return (
+                Left.Address1 == Right.Address1 &&
+                 Left.Address2 == Right.Address2 &&
+                  Left.Address3 == Right.Address3 &&
+                   Left.City == Right.City &&
+                    Left.PostalCode == Right.PostalCode &&
+                     Left.State == Right.State);
+        }
+
+        public static bool operator !=(Address Left, Address Right)
+        {
+            return !(Left == Right);
+        }
+
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            Address objAddress = obj as Address;
+            if ((Object)objAddress == null)
+            {
+                return false;
+            }
+            return (objAddress == this);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
