@@ -79,7 +79,9 @@ namespace CertiPay.Payroll.Common
         {
             return !(Left == Right);
         }
-
+        /// <summary>
+        /// Determines if two addresses are equal, by comparing each property (ignoring case) to its counterpart.
+        /// </summary>
         public override bool Equals(Object obj)
         {
             if (obj == null)
