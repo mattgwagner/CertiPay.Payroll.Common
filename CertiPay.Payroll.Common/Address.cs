@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace CertiPay.Payroll.Common
 {
     /// <summary>
@@ -66,10 +67,10 @@ namespace CertiPay.Payroll.Common
             }
 
             return (
-                Left.Address1 == Right.Address1 &&
-                 Left.Address2 == Right.Address2 &&
-                  Left.Address3 == Right.Address3 &&
-                   Left.City == Right.City &&
+                String.Equals(Left.Address1, Right.Address1, StringComparison.OrdinalIgnoreCase) &&
+                 String.Equals(Left.Address2, Right.Address2, StringComparison.OrdinalIgnoreCase) &&
+                  String.Equals(Left.Address3,Right.Address3, StringComparison.OrdinalIgnoreCase) &&
+                   String.Equals(Left.City, Right.City, StringComparison.OrdinalIgnoreCase) &&
                     Left.PostalCode == Right.PostalCode &&
                      Left.State == Right.State);
         }
@@ -93,9 +94,5 @@ namespace CertiPay.Payroll.Common
             return (objAddress == this);
         }
 
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
     }
 }
