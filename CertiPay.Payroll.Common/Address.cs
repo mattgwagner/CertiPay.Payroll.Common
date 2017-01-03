@@ -71,7 +71,7 @@ namespace CertiPay.Payroll.Common
                  String.Equals(Left.Address2, Right.Address2, StringComparison.OrdinalIgnoreCase) &&
                   String.Equals(Left.Address3,Right.Address3, StringComparison.OrdinalIgnoreCase) &&
                    String.Equals(Left.City, Right.City, StringComparison.OrdinalIgnoreCase) &&
-                    Left.PostalCode == Right.PostalCode &&
+                   String.Equals(Left.PostalCode, Right.PostalCode, StringComparison.OrdinalIgnoreCase) &&
                      Left.State == Right.State);
         }
 
