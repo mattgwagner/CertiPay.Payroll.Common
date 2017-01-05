@@ -51,22 +51,18 @@ namespace CertiPay.Payroll.Common
 
         public static bool operator ==(Address Left, Address Right)
         {
-            if (ReferenceEquals(Left, Right))
-            {
-                return true;
-            }
-            if ((object)Left == null || (object)Right == null)
-            {
-                return false;
-            }
+            if (ReferenceEquals(Left, Right)) return true;
 
-            return (
-                String.Equals(Left.Address1, Right.Address1, StringComparison.OrdinalIgnoreCase) &&
-                 String.Equals(Left.Address2, Right.Address2, StringComparison.OrdinalIgnoreCase) &&
-                  String.Equals(Left.Address3, Right.Address3, StringComparison.OrdinalIgnoreCase) &&
-                   String.Equals(Left.City, Right.City, StringComparison.OrdinalIgnoreCase) &&
-                   String.Equals(Left.PostalCode, Right.PostalCode, StringComparison.OrdinalIgnoreCase) &&
-                     Left.State == Right.State);
+            if ((object)Left == null || (object)Right == null) return false;
+
+            Func<String, String, Boolean> eq = (left, right) =>
+            {
+                // In this case, we'll say that things like Address2 being null on one side and "" on the other are good enough
+
+                return String.Equals(left ?? String.Empty, right ?? String.Empty, StringComparison.OrdinalIgnoreCase);
+            };
+
+            return eq(Left.Address1, Right.Address1) && eq(Left.Address2, Right.Address2) && eq(Left.Address3, Right.Address3) && eq(Left.City, Right.City) && eq(Left.PostalCode, Right.PostalCode) && Left.State == Right.State;
         }
 
         public static bool operator !=(Address Left, Address Right)
