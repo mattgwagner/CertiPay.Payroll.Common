@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace CertiPay.Payroll.Common
 {
     /// <summary>
@@ -40,7 +39,7 @@ namespace CertiPay.Payroll.Common
         /// <summary>
         /// The state the address is located in
         /// </summary>
-        public StateOrProvince State { get; set; }
+        public StateOrProvince State { get; set; } = StateOrProvince.Unknown;
 
         /// <summary>
         /// The postal "zip" code for the address, could include the additional four digits
@@ -50,14 +49,9 @@ namespace CertiPay.Payroll.Common
         [Display(Name = "Postal Code")]
         public String PostalCode { get; set; }
 
-        public Address()
-        {
-            this.State = StateOrProvince.FL;
-        }
-
         public static bool operator ==(Address Left, Address Right)
         {
-            if (ReferenceEquals(Left,Right))
+            if (ReferenceEquals(Left, Right))
             {
                 return true;
             }
@@ -69,7 +63,7 @@ namespace CertiPay.Payroll.Common
             return (
                 String.Equals(Left.Address1, Right.Address1, StringComparison.OrdinalIgnoreCase) &&
                  String.Equals(Left.Address2, Right.Address2, StringComparison.OrdinalIgnoreCase) &&
-                  String.Equals(Left.Address3,Right.Address3, StringComparison.OrdinalIgnoreCase) &&
+                  String.Equals(Left.Address3, Right.Address3, StringComparison.OrdinalIgnoreCase) &&
                    String.Equals(Left.City, Right.City, StringComparison.OrdinalIgnoreCase) &&
                    String.Equals(Left.PostalCode, Right.PostalCode, StringComparison.OrdinalIgnoreCase) &&
                      Left.State == Right.State);
@@ -79,22 +73,15 @@ namespace CertiPay.Payroll.Common
         {
             return !(Left == Right);
         }
+
         /// <summary>
         /// Determines if two addresses are equal, by comparing each property (ignoring case) to its counterpart.
         /// </summary>
         public override bool Equals(Object obj)
         {
-            if (obj == null)
-            {
-                return false;
-            }
-            Address objAddress = obj as Address;
-            if ((Object)objAddress == null)
-            {
-                return false;
-            }
-            return (objAddress == this);
-        }
+            Address other = obj as Address;
 
+            return other != null && (other == this);
+        }
     }
 }
